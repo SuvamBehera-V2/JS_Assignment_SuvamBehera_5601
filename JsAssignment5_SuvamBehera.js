@@ -1,19 +1,13 @@
 let userInput = prompt("Enter the text you want to transform: ");
 
 function charReplace(text){
-    let s = text.split('')
-    for (let i = 0; s.length; i++){
-        switch(s[i]){
-            case ' ':
-                break;
-            case 'z':
-                s[i] = 'a';
-                break
-            default:
-                s[i] = String.fromCharCode(1 + s[i].charCodeAt(0));
-        }
+    let allChar = text.split('')
+    for (let i = 0; i<allChar.length; i++){
+        let n = allChar[i].charCodeAt() - 'a'.charCodeAt();
+        n = (n+1) % 26;
+        allChar[i] = String.fromCharCode(n + 'a'.charCodeAt());
     }
-    return s.join('')
+    return allChar.join('')
 }
 
 console.log(charReplace(userInput));
