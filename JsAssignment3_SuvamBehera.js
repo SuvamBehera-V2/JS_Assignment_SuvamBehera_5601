@@ -1,3 +1,5 @@
+// This JS file has been embedded in the assignment3.html file. 
+
 function validation(){
     let userEnteredAge = parseInt(document.getElementById('age').value);
     if (Number.isInteger(userEnteredAge) != true){
