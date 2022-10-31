@@ -8,8 +8,9 @@ function charReplace(text){
                 break;
             case 'z':
                 allChar[i] = 'a';
+                break;
             default:
-                allChar.splice(i, 1, String.fromCharCode(allChar[i].charCodeAt(0) + 1))
+                allChar.splice(i, 1, String.fromCharCode(allChar[i].charCodeAt(0) + 1 ))
         }
     }
     return allChar.join('');
